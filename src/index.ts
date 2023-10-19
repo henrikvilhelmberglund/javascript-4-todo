@@ -80,6 +80,9 @@ function removeGrocery(item: HTMLLIElement): void {
 function onFilterGroceries(this: HTMLInputElement): void {
   const value = this.value.toLowerCase();
   const groceries = document.querySelectorAll("li");
+  // ? for arrow functions
+  // e: Event
+  // const value = (<HTMLInputElement>e.target).value
 
   for (let grocery of groceries) {
     const item = grocery.firstChild?.textContent?.toLowerCase();
